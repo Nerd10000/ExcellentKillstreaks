@@ -1,0 +1,11 @@
+name: ExcellentKillStreaks
+version: '1.0-SNAPSHOT'
+main: dragon.me.excellentKillStreaks.ExcellentKillStreaks
+api-version: '1.21'
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      # This means that your plugin will not have access to their classpath
+      join-classpath: true

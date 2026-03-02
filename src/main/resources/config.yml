@@ -1,0 +1,57 @@
+#    _____     _____ _                  _
+#   |  ___|   /  ___| |                | |
+#   | |____  _\ `--.| |_ _ __ ___  __ _| | _____
+#   |  __\ \/ /`--. \ __| '__/ _ \/ _` | |/ / __|
+#   | |___>  </\__/ / |_| | |  __/ (_| |   <\__ \
+#    \____/_/\_\____/ \__|_|  \___|\__,_|_|\_\___/
+#
+# Made by DragonDevelopsStuff / DragonCraft64
+# A simple lightweight killstreak plugin made for the Paper API
+
+# Placeholder list (for PlaceholderAPI)
+# > %exstreaks_streak% - Shows the streak of the current player.
+# > %exstreaks_streak_<player_name>% - Shows the streak of the player named <player_name>.
+# > %exstreaks_best% - Shows the best streak of the current player.
+# > %exstreaks_best_<player_name>% - Shows the best streak of the player named <player_name>
+
+# Note: Where <player_name> is null (Or the plugin can't find it) it will display 0!
+
+
+# Messages
+
+# The text which is used to replace %prefix% a.k.a the Prefix...
+prefix: "<gradient:#FF8383:#FF3C1F>ᴇxꜱᴛʀᴇᴀᴋꜱ</gradient> <grey>» "
+# Used when the player runs /streak without any arguments.
+killstreak_self_command: "%prefix% <grey>You have killstreak of <red>%streak%<grey>!"
+# Used when the player runs /streak and adds another player's name as the 1st argument.
+killstreak_other_command: "%prefix%  <grey>%player% <grey>has killstreak of <red>%streak%<grey>!"
+# Used when the player runs /best without adding any additional argument!
+best_streak_self_command: "%prefix% <grey>Your best killstreak is <red>%best%<grey>!"
+# Used when the player runs /best and adds another argument.
+best_streak_other_command: "%prefix%  <grey>%player%'s best killstreak is <red>%best%<grey>!"
+# Used for the reload command.
+reload_command: "%prefix% <grey>You reloaded the plugin!"
+# Used when the plugin can't find a specific player.
+no_such_player: "%prefix% <dark_red>Player is offline!"
+
+# Actions #
+# Actions are used to run a command when a player reaches a specific streak
+actions:
+  # The ID.
+  5_kill:
+    # The streak it requires to run the command.
+    require_actions: 5
+    # And the command(s) which you want to run when the action is triggered.
+    commands: []
+
+# This is triggered when a player loses his/her killstreak.
+lose_streak_commands: []
+
+# DO NOT EDIT ANYTHING BELOW THIS! #
+# This where the plugin stores data like profile best streaks, streaks and the uuid paired with this.
+
+# Data #
+# Remember do not edit this section!
+data:
+
+
