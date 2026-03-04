@@ -27,7 +27,7 @@ public class BestStreakCommand implements BasicCommand {
                 p.sendRichMessage(ConfigProvider.NO_SUCH_PLAYER);
                 return;
             }
-            other.sendRichMessage(ConfigProvider.OTHER_BEST_COMMAND
+            p.sendRichMessage(ConfigProvider.OTHER_BEST_COMMAND
                     .replace("%player%",args[0])
                     .replace("%best%",String.valueOf(ExcellentKillStreaks.getDataManager().getBest(other.getUniqueId().toString()))));
         }

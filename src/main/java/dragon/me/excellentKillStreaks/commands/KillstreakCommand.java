@@ -27,7 +27,7 @@ public class KillstreakCommand implements BasicCommand {
                 p.sendRichMessage(ConfigProvider.NO_SUCH_PLAYER);
                 return;
             }
-            other.sendRichMessage(ConfigProvider.OTHER_COMMAND
+            p.sendRichMessage(ConfigProvider.OTHER_COMMAND
                     .replace("%player%",args[0])
                     .replace("%streak%",String.valueOf(ExcellentKillStreaks.getDataManager().getStreak(other.getUniqueId().toString()))));
         }
