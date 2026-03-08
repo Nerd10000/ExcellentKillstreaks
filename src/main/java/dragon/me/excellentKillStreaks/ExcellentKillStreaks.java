@@ -31,7 +31,7 @@ public final class ExcellentKillStreaks extends JavaPlugin {
         actionDataManager.load();
 
         configProvider = new ConfigProvider(this);
-        if (Bukkit.getPluginManager().isPluginEnabled("ExcellentKillStreaks")){
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
             new PlaceholderExpansion().register();
         }
 

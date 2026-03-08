@@ -17,6 +17,9 @@ public class ReloadCommand implements BasicCommand {
 
         sender.sendRichMessage(ConfigProvider.RELOAD_COMMAND);
         ExcellentKillStreaks.getConfigProvider().reload(ExcellentKillStreaks.getPlugin());
+        ExcellentKillStreaks.getDataManager().load();
+        ExcellentKillStreaks.getActionDataManager().load();
+
 
     }
 

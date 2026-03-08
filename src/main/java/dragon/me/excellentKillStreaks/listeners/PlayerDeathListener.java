@@ -12,9 +12,7 @@ public class PlayerDeathListener implements Listener {
     @EventHandler
     public void onEvent(PlayerDeathEvent e){
         if (e.getEntity().getKiller() instanceof  Player p){
-            ExcellentKillStreaks.getDataManager().setStreak(e.getEntity().getUniqueId().toString(),0);
-
-
+            if (ExcellentKillStreaks.getDataManager().getStreak(e.getEntity().getUniqueId().toString()) <= 1) return;
 
             for (String command : ExcellentKillStreaks.getPlugin().getConfig().getStringList("lose_streak_commands")){
 
@@ -22,6 +20,9 @@ public class PlayerDeathListener implements Listener {
                         .replace("%player%",e.getEntity().getName())
                         .replace("%killer%", p.getName()));
             }
+            ExcellentKillStreaks.getDataManager().setStreak(e.getEntity().getUniqueId().toString(),0);
+
+
         }
     }
 }
