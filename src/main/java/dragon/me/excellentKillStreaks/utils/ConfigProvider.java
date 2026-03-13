@@ -12,6 +12,7 @@ public class ConfigProvider {
     public  static  String NO_SUCH_PLAYER;
     public static String SELF_BEST_COMMAND;
     public static String OTHER_BEST_COMMAND;
+    public static String ANTI_KILLFARM_ALERT;
 
     public ConfigProvider(Plugin plugin){
         PREFIX = plugin.getConfig().getString("prefix");
@@ -21,6 +22,7 @@ public class ConfigProvider {
         NO_SUCH_PLAYER = prefix(plugin.getConfig().getString("no_such_player"));
         SELF_BEST_COMMAND = prefix(plugin.getConfig().getString("best_streak_self_command"));
         OTHER_BEST_COMMAND = prefix(plugin.getConfig().getString("best_streak_other_command"));
+        ANTI_KILLFARM_ALERT = prefix(plugin.getConfig().getString("anti_kill_farm_message"));
     }
     public void reload(Plugin plugin){
         PREFIX = plugin.getConfig().getString("prefix");
@@ -30,6 +32,7 @@ public class ConfigProvider {
         NO_SUCH_PLAYER = prefix(plugin.getConfig().getString("no_such_player"));
         SELF_BEST_COMMAND = prefix(plugin.getConfig().getString("best_streak_self_command"));
         OTHER_BEST_COMMAND = prefix(plugin.getConfig().getString("best_streak_other_command"));
+        ANTI_KILLFARM_ALERT = prefix(plugin.getConfig().getString("anti_kill_farm_message"));
         plugin.reloadConfig();
     }
 
