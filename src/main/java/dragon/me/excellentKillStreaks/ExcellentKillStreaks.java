@@ -11,6 +11,7 @@ import dragon.me.excellentKillStreaks.listeners.AntiKillfarmListener;
 import dragon.me.excellentKillStreaks.listeners.PlayerDeathListener;
 import dragon.me.excellentKillStreaks.listeners.PlayerKillEntityListeners;
 import dragon.me.excellentKillStreaks.utils.ConfigProvider;
+import dragon.me.excellentKillStreaks.utils.UpdateChecker;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -36,6 +37,7 @@ public final class ExcellentKillStreaks extends JavaPlugin {
         if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")){
             new PlaceholderExpansion().register();
         }
+        UpdateChecker.check();
 
         getConfig().options().copyDefaults(true);
         saveConfig();
