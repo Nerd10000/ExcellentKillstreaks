@@ -1,7 +1,10 @@
 name: ExcellentKillStreaks
-version: '1.0-SNAPSHOT'
+version: 'v1.4.0'
 main: dragon.me.excellentKillStreaks.ExcellentKillStreaks
 api-version: '1.21'
+description: "A lightweight killstreak system for all kinds of Paper servers."
+authors:
+  - DragonDevelopsStuff
 dependencies:
   server:
     PlaceholderAPI:

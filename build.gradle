@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'dragon.me'
-version = 'v1.2.0'
+version = 'v1.3.1'
 
 repositories {
     mavenCentral()
@@ -21,6 +21,7 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
     compileOnly 'me.clip:placeholderapi:2.12.2'
+    implementation("org.json:json:20240303")
 }
 
 tasks {

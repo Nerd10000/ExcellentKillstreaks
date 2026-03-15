@@ -36,6 +36,17 @@ no_such_player: "%prefix% <dark_red>Player is offline!"
 # This message is used when a players is killed a player too many times and tries again but it is on a cooldown.
 anti_kill_farm_message: "%prefix% <red>Hey, we noticed you killed %player% too many times over and over again so you this kill will not count "
 
+update_started: "%prefix% <gray>The plugin has started updating please wait..."
+update_ended_with_errors: "%prefix% <red>The plugin failed to update. See the console."
+update_ended_without_errors: "%prefix% <green>The plugin has been updated, please restart the server!"
+
+help_command:
+  - "<gradient:#FF8383:#FF3C1F>ᴇxꜱᴛʀᴇᴀᴋꜱ</gradient> <grey>Help"
+  - " <dark_grey>» <red>/exstreak reload <dark_grey> - <grey>Reloads the plugin."
+  - " <dark_grey>» <red>/exstreak info <dark_grey> - <grey>Gives information about the plugin (version, author)."
+  - " <dark_grey>» <red>/exstreak update <dark_grey> - <grey>Updates the plugin via the <green>Modrinth API<grey>."
+  - ""
+info_command: "<grey>You are running ExcellentKillstreaks <red>%version%<grey>, made by <red>%author%<grey>!"
 # Actions #
 # Actions are used to run a command when a player reaches a specific streak
 actions:

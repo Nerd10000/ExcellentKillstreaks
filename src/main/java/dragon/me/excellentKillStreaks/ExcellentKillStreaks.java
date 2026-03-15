@@ -2,7 +2,7 @@ package dragon.me.excellentKillStreaks;
 
 import dragon.me.excellentKillStreaks.commands.BestStreakCommand;
 import dragon.me.excellentKillStreaks.commands.KillstreakCommand;
-import dragon.me.excellentKillStreaks.commands.ReloadCommand;
+import dragon.me.excellentKillStreaks.commands.MainCommand;
 import dragon.me.excellentKillStreaks.config.ActionDataManager;
 import dragon.me.excellentKillStreaks.config.AntiKillfarmDataManager;
 import dragon.me.excellentKillStreaks.config.DataManager;
@@ -47,7 +47,7 @@ public final class ExcellentKillStreaks extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new AntiKillfarmListener(),this);
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS, commands -> {
-            commands.registrar().register("exreload",new ReloadCommand());
+            commands.registrar().register("exstreaks",new MainCommand());
             commands.registrar().register("streak", new KillstreakCommand());
             commands.registrar().register("beststreak",new BestStreakCommand());
         });

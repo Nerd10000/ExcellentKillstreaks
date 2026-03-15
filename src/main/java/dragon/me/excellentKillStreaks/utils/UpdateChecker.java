@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class UpdateChecker {
 
-    private static final String PLUGIN_ID = "wm4KGLZN";
+    public static final String PLUGIN_ID = "wm4KGLZN";
     private static final String API = "https://api.modrinth.com/v2/project/%s/version";
 
     public static void check() {
@@ -41,14 +41,10 @@ public class UpdateChecker {
 
                 reader.close();
 
-                /*
-                 Modrinth returns an array of versions.
-                 The first entry is the newest.
-                */
 
                 String response = json.toString();
 
-                // simple parsing (no JSON lib needed)
+
                 String latestVersion = response.split("\"version_number\":\"")[1].split("\"")[0];
 
                 PluginDescriptionFile description =
@@ -60,27 +56,17 @@ public class UpdateChecker {
 
                     Bukkit.getScheduler().runTask(ExcellentKillStreaks.getPlugin(), () -> {
 
-                        Bukkit.getConsoleSender().sendMessage(
-                                "§6[ExcellentKillStreaks] §eA new version is available!"
-                        );
-
-                        Bukkit.getConsoleSender().sendMessage(
-                                "§7Current: §c" + currentVersion +
-                                        " §7Latest: §a" + latestVersion
-                        );
-
-                        Bukkit.getConsoleSender().sendMessage(
-                                "§7Download: §bhttps://modrinth.com/plugin/excellentkillstreaks"
-                        );
-
+                        ExcellentKillStreaks.getPlugin().getLogger().warning("Hey, we noticed you are using an outdated version of ExcellentKillstreaks!");
+                        ExcellentKillStreaks.getPlugin().getLogger().warning("Your version '" + currentVersion +"' while the latest version '" + latestVersion + "', we recommend you to update for full compatibility and for new features.");
+                        ExcellentKillStreaks.getPlugin().getLogger().warning("Download at https://modrinth.com/plugin/excellentkillstreaks");
                     });
 
                 }
 
             } catch (Exception e) {
-                Bukkit.getConsoleSender().sendMessage(
-                        "§c[ExcellentKillStreaks] Update check failed."
-                );
+
+                ExcellentKillStreaks.getPlugin().getLogger().severe("[ExcellentKillStreaks] Update check failed.");
+                e.printStackTrace();
             }
 
         });
